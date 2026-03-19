@@ -1,5 +1,5 @@
 # Tableau-Sales-Customer-Dashboard
-## 📌 Overview
+## Overview
 
 A two-dashboard Tableau system built for a retail business to replace manual reporting with always-live, self-serve intelligence. Four data tables were unified into a single model powering dynamic year-over-year comparisons across **2020–2023**.
 
@@ -7,7 +7,7 @@ A two-dashboard Tableau system built for a retail business to replace manual rep
 
 ---
 
-## 🛠️ Tools & Techniques
+## Tools & Techniques
 
 | Tool | Purpose |
 |---|---|
@@ -20,21 +20,21 @@ A two-dashboard Tableau system built for a retail business to replace manual rep
 
 ---
 
-## 📊 Dashboard Breakdown
+## Dashboard Breakdown
 
-### 🛒 Sales Dashboard
+### Sales Dashboard
 Tracks **Sales, Profit, and Orders** with weekly granularity. Automated `WINDOW_MAX` / `WINDOW_MIN` highlights surface the best and worst performing weeks instantly. A subcategory comparison makes growth vs. decline impossible to miss.
 ```
 Declining profit + Rising sales     →  Margin conversation
 Declining profit + Declining sales  →  Strategic conversation
 ```
 
-### 👥 Customer Dashboard
+### Customer Dashboard
 Tracks **Total Customers, Sales Per Customer, and Orders Per Customer** year-over-year — distinguishing whether growth is driven by frequency *(defensible)* or pure acquisition *(fragile)*. A **Top Customers** view surfaces the highest revenue concentration risks.
 
 ---
 
-## 📈 Key Results
+## Key Results
 
 | Metric | YOY Change | Signal |
 |---|---|---|
@@ -44,11 +44,11 @@ Tracks **Total Customers, Sales Per Customer, and Orders Per Customer** year-ove
 
 ---
 
-## 💡 Recommendations
+## Recommendations
 
-- 🎯 **Depth over volume** — if Sales Per Customer falls while customer count rises, shift focus to retention.
-- 📅 **Replicate peak weeks** — use Min/Max insights to engineer high-performing conditions intentionally.
-- 📉 **Subcategory threshold** — trigger a formal review for any subcategory declining **>10% YOY**.
-- 🤝 **Monitor top customers** — a declining order frequency from high-value customers is an early warning sign.
+-  **Depth over volume** — if Sales Per Customer falls while customer count rises, shift focus to retention.
+-  **Replicate peak weeks** — use Min/Max insights to engineer high-performing conditions intentionally.
+-  **Subcategory threshold** — trigger a formal review for any subcategory declining **>10% YOY**.
+-  **Monitor top customers** — a declining order frequency from high-value customers is an early warning sign.
 
 ---
