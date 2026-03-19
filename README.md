@@ -1,23 +1,54 @@
 # Tableau-Sales-Customer-Dashboard
- Overview
-A two-dashboard Tableau system built for a retail business to replace manual reporting with always-live, self-serve intelligence. Four data tables — Orders, Customers, Products, and Location — were unified into a single model powering dynamic year-over-year analysis across 2020–2023.
-A single Select Year parameter controls every metric across both dashboards instantly — no data team, no manual refresh.
+## 📌 Overview
 
-🛠️ Tools & Techniques
-Tableau  |  DAX Calculated Fields  |  LOD Expressions  |  Window Functions  |  Parameters  |  KPI Design
+A two-dashboard Tableau system built for a retail business to replace manual reporting with always-live, self-serve intelligence. Four data tables were unified into a single model powering dynamic year-over-year comparisons across **2020–2023**.
 
-📊 Dashboard Breakdown
-Sales Dashboard
-Tracks Sales, Profit, and Orders with weekly granularity. Automated Min/Max highlights surface the best and worst performing weeks instantly. A subcategory comparison view makes growth vs. decline visible at a glance — declining profit on rising sales flags a margin issue; declining on both flags a strategic one.
-Customer Dashboard
-Tracks Total Customers, Sales Per Customer, and Orders Per Customer year-over-year. Distinguishes whether growth is driven by frequency (defensible) or pure acquisition (fragile). A Top Customers view surfaces the individual relationships with the highest revenue concentration risk.
+> A single **Select Year parameter** controls every metric across both dashboards instantly — no data team, no manual refresh required.
 
-📈 Key Results
-MetricYOY ChangeTotal Sales+20.4%Total Profit+14.2%Orders Per Customer+28.0%
+---
 
-💡 Key Recommendations
+## 🛠️ Tools & Techniques
 
-Depth over volume — if Sales Per Customer is falling while customer count rises, shift focus to retention.
-Replicate peak weeks — use Min/Max insights to engineer high-performing conditions intentionally.
-Subcategory threshold — trigger a formal review for any subcategory declining more than 10% YOY.
-Monitor top customers — declining order frequency from high-value customers is an early warning sign.
+| Tool | Purpose |
+|---|---|
+| **Tableau** | Dashboard design & data modelling |
+| **DAX Calculated Fields** | Current year vs. previous year metric logic |
+| **LOD Expressions** | Distinct customer counts independent of view context |
+| **Window Functions** | Auto-labelling best & worst performing weeks |
+| **Parameters** | Single year-selector controlling all metrics |
+| **KPI Design** | Directional flags for instant performance signals |
+
+---
+
+## 📊 Dashboard Breakdown
+
+### 🛒 Sales Dashboard
+Tracks **Sales, Profit, and Orders** with weekly granularity. Automated `WINDOW_MAX` / `WINDOW_MIN` highlights surface the best and worst performing weeks instantly. A subcategory comparison makes growth vs. decline impossible to miss.
+```
+Declining profit + Rising sales     →  Margin conversation
+Declining profit + Declining sales  →  Strategic conversation
+```
+
+### 👥 Customer Dashboard
+Tracks **Total Customers, Sales Per Customer, and Orders Per Customer** year-over-year — distinguishing whether growth is driven by frequency *(defensible)* or pure acquisition *(fragile)*. A **Top Customers** view surfaces the highest revenue concentration risks.
+
+---
+
+## 📈 Key Results
+
+| Metric | YOY Change | Signal |
+|---|---|---|
+| Total Sales | **+20.4%** | ✅ Growing |
+| Total Profit | **+14.2%** | ✅ Growing |
+| Orders Per Customer | **+28.0%** | ✅ Frequency rising |
+
+---
+
+## 💡 Recommendations
+
+- 🎯 **Depth over volume** — if Sales Per Customer falls while customer count rises, shift focus to retention.
+- 📅 **Replicate peak weeks** — use Min/Max insights to engineer high-performing conditions intentionally.
+- 📉 **Subcategory threshold** — trigger a formal review for any subcategory declining **>10% YOY**.
+- 🤝 **Monitor top customers** — a declining order frequency from high-value customers is an early warning sign.
+
+---
